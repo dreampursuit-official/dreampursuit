@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>portfolio Matthias</title>
+  <title>DreamPursuit.wait</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -15,22 +15,106 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer>
   </script>
   <!-- eigen geschreven css voor jouw html-bestand -->
-  <link rel="stylesheet" href="./css/style2.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+
+  <h1>DreamPursuit</h1>
   
-  <!DOCTYPE html>
-<html lang="nl">
-  <section>
-    <p> </p>
-    <header>Contact</header>
-    <hr class="custom-hr">
-</section>
-<form name="contact" method="post" data-netlify="true" >
-<section>
+</style>
+</head>
+<body>
+    <div class="hero">
+        <div class="overlay">
+            <div class="container">
+                <div class="brand">
+                    
+                </div>
+                <h2>
+                  dreampursuit.official
+                </h2>
+                
+                <p class="description">
+                    Be the first to experience our luxury collection. Join the exclusive waitlist.
+                </p>
 
-        <input type="text" name="name" placeholder="name" required>
-        <input type="email" name="Email" placeholder="Email" required>
-        <input type="tel" name="phone" placeholder="Your Phone Number (Optional)">
-        <button type="submit">Send</button>
-    </form>
-</section>
+                <div class="scarcity">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="pulse">
+                        <path d="M12 20v-6M12 10v-6M16.243 4.757l-8.486 8.486M19.07 7.93l-1.41-1.42M19.07 14.07l-1.41 1.42M4.93 7.93l1.41-1.42M4.93 14.07l1.41 1.42"/>
+                    </svg>
+                    <span><span id="counter" class="counter"></span> people have joined the waitlist take action !!</span>
+                </div>
 
+                <form id="waitlistForm">
+                    <div class="input-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        <input type="text" placeholder="Your Full Name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2"/>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                        </svg>
+                        <input type="email" placeholder="Your Email Address" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <input type="tel" placeholder="Your Phone Number (Optional)">
+                    </div>
+
+                    <button type="submit">Join the Waitlist</button>
+                </form>
+
+                <div id="successMessage" class="success">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 1rem;">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <path d="m9 11 3 3L22 4"/>
+                    </svg>
+                    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem">Thank You!</h3>
+                    <p style="color: #d1d5db">
+                        You're now on our exclusive waitlist. We'll notify you when we launch.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize counter with random number between 200 and 300
+        let count = Math.floor(Math.random() * (30 - 20 + 10)) + 20;
+        const counter = document.getElementById('counter');
+        counter.textContent = count;
+
+        // Randomly increment counter
+        setInterval(() => {
+            if (Math.random() < 0.3) { // 30% chance to increment
+                count++;
+                counter.textContent = count;
+            }
+        }, 3000);
+
+        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = this;
+            const success = document.getElementById('successMessage');
+            
+            // Simulate form submission
+            form.querySelector('button').textContent = 'Joining...';
+            form.querySelector('button').disabled = true;
+            
+            setTimeout(() => {
+                count++; // Increment counter when someone joins
+                counter.textContent = count;
+                form.classList.add('hidden');
+                success.classList.add('visible');
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
